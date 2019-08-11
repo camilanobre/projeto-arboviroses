@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+      <ion-title>Atendimento</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+
+    <p><strong>Ht aumentado em mais de 10% ou:
+      <ul>
+        <li>Crianças > 38%</li>
+        <li>Mulheres > 44%</li>
+        <li>Homens > 50%</li>
+      </ul>
+    </strong><br>
+  <strong>Conduta:</strong>
+  Leito de Observação + Hidratação Oral Supervisionada ou Parenteral.
+    </p>
+    <h6>Reavaliar em 4 horas.</h6>
+    <h5>Aumento do Ht ou sinal de choque/alarme?</h5>
+    <ion-button size="large" color="danger" (click)="conduta2c()">Sim</ion-button>
+    <ion-button size="large" color="success" (click)="conduta2a()">Não</ion-button>
+
+      <br><br>
+      <ion-button shape="round" fill="outline" color="medium" routerLink="/conduta1a">
+        <ion-icon name="arrow-round-back"></ion-icon>Voltar
+      </ion-button>
+  
+  </ion-content>
+

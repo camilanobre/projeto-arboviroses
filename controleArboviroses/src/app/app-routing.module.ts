@@ -23,7 +23,12 @@ const routes: Routes = [
   { path: 'conduta1a', loadChildren: './conduta1a/conduta1a.module#Conduta1aPageModule' },
   { path: 'conduta1b', loadChildren: './conduta1b/conduta1b.module#Conduta1bPageModule' },
   { path: 'conduta2c', loadChildren: './conduta2c/conduta2c.module#Conduta2cPageModule' },
-  { path: 'conduta-uti', loadChildren: './conduta-uti/conduta-uti.module#CondutaUTIPageModule' }
+  { path: 'conduta-uti', loadChildren: './conduta-uti/conduta-uti.module#CondutaUTIPageModule' },
+  { path: 'conduta2d', loadChildren: './conduta2d/conduta2d.module#Conduta2dPageModule' },
+  { path: 'avaliar-alta', loadChildren: './avaliar-alta/avaliar-alta.module#AvaliarAltaPageModule' },
+  { path: 'nao-alta', loadChildren: './nao-alta/nao-alta.module#NaoAltaPageModule' },
+  { path: 'conduta2a', loadChildren: './conduta2a/conduta2a.module#Conduta2aPageModule' },
+  { path: 'conduta2b', loadChildren: './conduta2b/conduta2b.module#Conduta2bPageModule' }
 ];
 
 @NgModule({

@@ -26,4 +26,7 @@ export class Conduta1bPage implements OnInit {
   conduta2c(){
     this.router.navigate(['conduta2c']);
   }
+  conduta2d(){
+    this.router.navigate(['conduta2d'])
+  }
 }

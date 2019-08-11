@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Atendimento</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+<ul>
+  <li>Leito de internação ( no mínimo 48 hs )</li>
+  <li> Hidratação IV</li>
+  <li>Reavaliação clínica e laboral (2 hs)</li>
+</ul>
+    <h5>Melhora clínica e laboral?<br>
+    DV e PA estáveis?<br>
+    Diurese normal?
+    Queda Ht?</h5>
+    <ion-button size="large" color="warning" (click)="conduta2c()">Sim</ion-button>
+    <ion-button size="large" color="danger">Não</ion-button>
+      <br><br>
+      <ion-button shape="round" fill="outline" color="medium" routerLink="/caso-suspeito">
+        <ion-icon name="arrow-round-back"></ion-icon>Voltar
+      </ion-button>
+  
+  </ion-content>
+

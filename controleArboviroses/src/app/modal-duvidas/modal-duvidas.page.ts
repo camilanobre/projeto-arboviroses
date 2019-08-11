@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-modal-duvidas',
   templateUrl: './modal-duvidas.page.html',
   styleUrls: ['./modal-duvidas.page.scss'],
 })
-export class ModalDuvidasPage implements OnInit {
+export class ModalDuvidasPage {
 
-  constructor() { }
+  constructor( private nav : NavController,
+    private modalController: ModalController
+    ) { }
 
-  ngOnInit() {
+  closeModal(){
+    this.modalController.dismiss();
   }
 
 }

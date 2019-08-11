@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ModalDuvidasPageModule } from './modal-duvidas/modal-duvidas.module';
 import { ModalSobrePageModule } from './modal-sobre/modal-sobre.module';
+import { CondicoesEspeciaisPageModule } from './condicoes-especiais/condicoes-especiais.module';
+import { DuvidaChoqueAlarmePageModule } from './duvida-choque-alarme/duvida-choque-alarme.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +21,9 @@ import { ModalSobrePageModule } from './modal-sobre/modal-sobre.module';
     IonicModule.forRoot(),
     AppRoutingModule,
     ModalSobrePageModule,
-    ModalDuvidasPageModule
+    ModalDuvidasPageModule,
+    CondicoesEspeciaisPageModule,
+    DuvidaChoqueAlarmePageModule
   ],
   providers: [
     StatusBar,

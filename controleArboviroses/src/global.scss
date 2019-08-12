@@ -24,16 +24,17 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
 
  ion-title, h1{
-    font-family: Verdana;
+  font-family: 'Nanum Gothic', sans-serif;
     text-align: center;
  }
  .my-custom-modal-css .modal-wrapper {
    height: 60%;
    top: 20%;
    position: absolute; 
-   display: block;  
+   display: block; 
  }
  ion-button:hover {
   cursor: pointer;
@@ -41,4 +42,24 @@
 ion-item:hover{
   cursor: pointer;
 }
+ion-title{
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+
+ion-icon{
+  padding-right: 15px;
+  font-size: 30px;
+}
+ion-toolbar{
+// background: linear-gradient(to right, #ffffff, #c0d0e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, #CFDEF3, #E0EAFC)
  
+
+}
+.header-md:after{
+  height: 0px !important;
+  color: #f0f0f0;
+}
+

@@ -26,8 +26,9 @@
 @import "~@ionic/angular/css/flex-utils.css";
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
 
+
  ion-title, h1{
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Nanum Gothic';
     text-align: center;
  }
  .my-custom-modal-css .modal-wrapper {
@@ -53,10 +54,7 @@ ion-icon{
   font-size: 30px;
 }
 ion-toolbar{
-// background: linear-gradient(to right, #ffffff, #c0d0e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-background: linear-gradient(to right, #CFDEF3, #E0EAFC)
- 
-
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .header-md:after{
   height: 0px !important;

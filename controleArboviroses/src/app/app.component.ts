@@ -14,7 +14,9 @@ export class AppComponent {
   public appPages = [
     { title: 'Home', url: '/home', icon: 'ios-home' },
     { title: 'Atendimentos', url: '/', icon: 'clipboard' },
-    { title: 'Sair', url: '/', icon: 'log-out' },   
+    { title: 'Sobre', url: '/', icon: 'text' },  
+    { title: 'Dúvidas Frequentes', url: '/', icon: 'help-circle-outline' }, 
+    { title: 'Sair', url: '/', icon: 'log-out' },  
   ];
 
   constructor(

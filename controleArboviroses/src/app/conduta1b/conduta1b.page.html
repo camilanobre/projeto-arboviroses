@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="toolbar">
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
           </ion-buttons>
@@ -16,15 +16,15 @@
       <strong>Hidratação EV.</strong><br>
       <strong>Repouso.</strong>
     </p>
-    <h5>O sinal é de choque ou alarme?</h5>
-    <ion-button size="large" color="warning" (click)="conduta2c()">Alarme</ion-button>
-    <ion-button size="large" color="danger" (click)="conduta2d()">Choque</ion-button>
-    <ion-item (click)="modalChoqueAlarme()">
-        <ion-icon name="add-circle-outline" color="black"></ion-icon>
-        <ion-label>O que são sinais de choque/alarme?</ion-label>
-      </ion-item>
+    <h5><strong>O sinal é de choque ou alarme?</strong></h5>
+    <ion-button size="medium" color="warning" (click)="conduta2c()">Alarme</ion-button>
+    <ion-button size="medium" color="danger" (click)="conduta2d()">Choque</ion-button>
+    <ion-button size="full" fill="clear" color="dark" (click)="modalChoqueAlarme()">
+        sobre sinais de choque/alarme
+        <ion-icon  color="dark" name="information-circle"></ion-icon>
+      </ion-button>
       <br><br>
-      <ion-button shape="round" fill="outline" color="medium" routerLink="/caso-suspeito">
+      <ion-button shape="round" fill="outline" color="secondary"  routerLink="/caso-suspeito">
         <ion-icon name="arrow-round-back"></ion-icon>Voltar
       </ion-button>
   

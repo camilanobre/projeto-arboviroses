@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="toolbar">
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
           </ion-buttons>
@@ -8,7 +8,7 @@
   </ion-header>
   
   <ion-content padding>
-    <h3>Avaliar Alta</h3>
+    <h4><strong>Avaliar Alta</strong></h4>
 <ul>
   <li>Estabilidade hemodinâmica (48 h)</li>
   <li>Ausência de febre (48 h)</li>
@@ -17,11 +17,11 @@
   <li>Ausência de sintomas respiratórios</li>
 
 </ul>
-    <h5>Houve melhora?</h5>
-    <ion-button size="large" color="success" (click)="conduta2a()">Sim</ion-button>
-    <ion-button size="large" color="danger" (click)="conduta2c()">Não</ion-button>
+    <h5><strong>Houve melhora?</strong></h5>
+    <ion-button size="medium" color="success" (click)="conduta2a()">Sim</ion-button>
+    <ion-button size="medium" color="danger" (click)="conduta2c()">Não</ion-button>
     <br><br>
-      <ion-button shape="round" fill="outline" color="medium" >
+      <ion-button shape="round" fill="outline" color="secondary" (click)=" voltar()">
         <ion-icon name="arrow-round-back"></ion-icon>Voltar
       </ion-button>
   

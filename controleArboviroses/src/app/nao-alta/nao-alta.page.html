@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="toolbar">
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
           </ion-buttons>
@@ -8,12 +8,12 @@
   </ion-header>
   
   <ion-content padding>
-    <p>Repetir expansão 3 vezes.</p>
-    <h5>Houve uma boa resposta?</h5>
-    <ion-button size="large" color="success" (click)="conduta2c()">Sim</ion-button>
-    <ion-button size="large" color="danger" (click)="conduta2d()">Não</ion-button>
+    <h5>Repetir expansão 3 vezes.</h5>
+    <h5><strong>Houve uma boa resposta?</strong></h5>
+    <ion-button size="medium" color="success" (click)="conduta2c()">Sim</ion-button>
+    <ion-button size="medium" color="danger" (click)="conduta2d()">Não</ion-button>
     <br><br>
-      <ion-button shape="round" fill="outline" color="medium" routerLink="/conduta2c">
+      <ion-button shape="round" fill="outline" color="secondary" routerLink="/conduta2c">
         <ion-icon name="arrow-round-back"></ion-icon>Voltar
       </ion-button>
   

@@ -1,9 +1,15 @@
-h3, ion-title{
-    text-align: center;
-    font-family: Verdana;
-    color: black;
-}
+ion-item:hover{
+    cursor: pointer;
+  }
+
 p{
-    text-align: justify;
-    font-family: Verdana;
+  font-family: 'Nanum Gothic';
+  text-align: justify;
+}
+h3{
+  font-weight: bold;
+  font-family: 'Nanum Gothic';
+}
+li{
+font-family: 'Nanum Gothic';  
 }

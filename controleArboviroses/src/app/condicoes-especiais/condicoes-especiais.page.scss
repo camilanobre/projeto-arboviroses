@@ -1,9 +1,19 @@
 ion-title{
     text-align: center;
-    font-family: Verdana;
     color: black;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Red Hat Display';
 }
-p{
+p, li{
     text-align: justify;
-    font-family: Verdana;
+    font-size: 15px;
+    font-family: 'Red Hat Display';
+}
+ion-toolbar{
+    //background: linear-gradient(to right, #CFDEF3, #E0EAFC)
+    background: linear-gradient(to right, #87CEFA, #B0E0E6)!important
+    }
+h5{
+    font-size: 14px;   
 }

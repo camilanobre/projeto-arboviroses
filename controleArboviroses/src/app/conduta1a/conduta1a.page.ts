@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-conduta1a',
@@ -8,7 +9,8 @@ import { Router } from '@angular/router';
 })
 export class Conduta1aPage implements OnInit {
 
-  constructor(private router : Router) { }
+  constructor(private router : Router,
+    private navCtrl: NavController) { }
 
   ngOnInit() {
   }
@@ -17,6 +19,9 @@ export class Conduta1aPage implements OnInit {
   }
   conduta2b(){
     this.router.navigate(['conduta2b'])
+  }
+  voltar(){
+    this.navCtrl.back();
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-avaliar-alta',
@@ -8,15 +9,19 @@ import { Router } from '@angular/router';
 })
 export class AvaliarAltaPage implements OnInit {
 
-  constructor(private router : Router) { }
+  constructor(private router : Router,
+    private navCtrl: NavController ) { }
 
   ngOnInit() {
+  }
+  conduta2a(){
+    this.router.navigate(['conduta2a'])
   }
   conduta2c(){
     this.router.navigate(['conduta2c'])
   }
-  conduta2a(){
-    this.router.navigate(['conduta2a'])
+  voltar(){
+    this.navCtrl.back();
   }
 
 }

@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="toolbar">
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
           </ion-buttons>
@@ -8,20 +8,20 @@
   </ion-header>
   
   <ion-content padding>
-    <h4>Atendimento de caso com sinais de alarme</h4>
+    <h4><strong>Atendimento de caso com sinais de alarme</strong></h4>
 <ul>
-  <li>Leito de internação ( no mínimo 48 hs )</li>
+  <li>Leito de internação( no mínimo 48 hs )</li>
   <li> Hidratação IV</li>
-  <li>Reavaliação clínica e laboral (2 hs)</li>
+  <li>Reavaliação clínica e laboral(2 hs)</li>
 </ul>
-    <h5>Melhora clínica e laboral?<br>
+    <p>Melhora clínica e laboral?<br>
     DV e PA estáveis?<br>
     Diurese normal?
-    Queda Ht?</h5>
-    <ion-button size="large" color="success" (click)="avaliarAlta()">Sim</ion-button>
-    <ion-button size="large" color="warning" (click)="naoAlta()">Não</ion-button>
+    Queda Ht?</p>
+    <ion-button size="medium" color="success" (click)="avaliarAlta()">Sim</ion-button>
+    <ion-button size="medium" color="warning" (click)="naoAlta()">Não</ion-button>
       <br><br>
-      <ion-button shape="round" fill="outline" color="medium" routerLink="/caso-suspeito">
+      <ion-button shape="round" fill="outline" color="secondary" routerLink="/conduta1b">
         <ion-icon name="arrow-round-back"></ion-icon>Voltar
       </ion-button>
   

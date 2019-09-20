@@ -29,7 +29,8 @@ const routes: Routes = [
   { path: 'conduta2a', loadChildren: './conduta2a/conduta2a.module#Conduta2aPageModule' },
   { path: 'conduta2b', loadChildren: './conduta2b/conduta2b.module#Conduta2bPageModule' },
   { path: 'sobre', loadChildren: './sobre/sobre.module#SobrePageModule' },
-  { path: 'duvidasfrequentes', loadChildren: './duvidasfrequentes/duvidasfrequentes.module#DuvidasfrequentesPageModule' }
+  { path: 'duvidasfrequentes', loadChildren: './duvidasfrequentes/duvidasfrequentes.module#DuvidasfrequentesPageModule' },
+  { path: 'login', loadChildren: './auth/pages/login/login.module#LoginPageModule' }
 ];
 
 @NgModule({

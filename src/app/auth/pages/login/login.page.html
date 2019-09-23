@@ -1,9 +1,47 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content padding>
 
-<ion-content>
+<h1 text-center>
+<ion-icon name="pulse" color="primary" class="icon-7em"></ion-icon>
+</h1>
 
+<form [formGroup]="authForm" (submit)="onSubmit()">
+  <ng-container *ngIf="!configs.isSignIn">
+      <ion-item>
+          <ion-icon name="person" color="primary" slot="start"></ion-icon>
+          <ion-input type="text" placeholder="Nome" formControlName="name"></ion-input>
+          <ion-note slot="end" color="danger" *ngIf="name.dirty && name.hasError('required')"> 
+            Campo obrigatório
+          </ion-note>
+          <ion-note slot="end" color="danger" *ngIf="name.dirty && name.hasError('minlength')"> 
+            Nome com mínimo de 8 caracteres
+        </ion-note>
+        </ion-item>
+  </ng-container>
+  <ion-item>
+    <ion-icon name="contacts" color="primary" slot="start"></ion-icon>
+    <ion-input type="email" placeholder="E-mail" formControlName="email"
+    inputmode="email" autofocus="true"></ion-input>
+    <ion-note slot="end" color="danger" *ngIf="email.dirty && email.hasError('required')"> 
+      Campo obrigatório
+    </ion-note>
+    <ion-note slot="end" color="danger" *ngIf="email.dirty && email.hasError('email')"> 
+        E-mail inválido
+    </ion-note>
+    </ion-item>
+    <ion-item>
+    <ion-icon name="lock" color="primary" slot="start"></ion-icon>
+    <ion-input type="senha" placeholder="Senha" formControlName="senha"></ion-input>
+    <ion-note slot="end" color="danger" *ngIf="senha.dirty && senha.hasError('required')"> 
+      Campo obrigatório
+    </ion-note>
+    <ion-note slot="end" color="danger" *ngIf="senha.dirty && senha.hasError('minlength')"> 
+      Senha com mínimo de 6 caracteres
+  </ion-note>
+  </ion-item>
+  <ion-button expand="block" type="submit" [disabled]="authForm.invalid">{{ configs.action }}</ion-button>
+</form>
+
+<ion-button expand="block" fill="clear" (click)="changeAuthAction()">
+  {{ configs.actionChange }}
+</ion-button>
 </ion-content>

@@ -1,5 +1,7 @@
+import { AuthProvider } from './../../../services/auth.types';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,6 +11,7 @@ import { FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
 export class LoginPage implements OnInit {
 
   authForm: FormGroup;
+  authProviders = AuthProvider;
   configs = {
     isSignIn: true,
     action: 'Entrar',
@@ -16,7 +19,7 @@ export class LoginPage implements OnInit {
   };
   private nameControl = new FormControl('', [Validators.required, Validators.minLength(8)])
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private authService: AuthService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.createForm();
@@ -25,15 +28,15 @@ export class LoginPage implements OnInit {
   private createForm(): void {
     this.authForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      senha: ['', [Validators.required, Validators.minLength(6)]]
+      password: ['', [Validators.required, Validators.minLength(6)]]
     })
   }
 
   get email(): FormControl {
     return <FormControl>this.authForm.get('email')
   }
-  get senha(): FormControl {
-    return <FormControl>this.authForm.get('senha')
+  get password(): FormControl {
+    return <FormControl>this.authForm.get('password')
   }
   get name(): FormControl {
     return <FormControl>this.authForm.get('name')
@@ -49,8 +52,19 @@ export class LoginPage implements OnInit {
       : this.authForm.removeControl('name')
   }
 
-  onSubmit(): void {
-    console.log('Dados de Formulario', this.authForm.value)
+  async onSubmit(provider: AuthProvider): Promise<void> {
+
+    try{
+      const credentials = await this.authService.authenticate({
+        isSignIn: this.configs.isSignIn,
+        user: this.authForm.value,
+        provider
+      });
+      console.log('Autenticado => ', credentials)
+      console.log('Redirect ')
+    }catch(e) {
+      console.log('Erro autenticação =>', e)
+    }
   }
 
 }

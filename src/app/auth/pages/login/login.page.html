@@ -4,7 +4,8 @@
 <ion-icon name="pulse" color="primary" class="icon-7em"></ion-icon>
 </h1>
 
-<form [formGroup]="authForm" (submit)="onSubmit()">
+<form [formGroup]="authForm" 
+      (submit)="onSubmit(authProviders.Email)">
   <ng-container *ngIf="!configs.isSignIn">
       <ion-item>
           <ion-icon name="person" color="primary" slot="start"></ion-icon>
@@ -30,11 +31,11 @@
     </ion-item>
     <ion-item>
     <ion-icon name="lock" color="primary" slot="start"></ion-icon>
-    <ion-input type="senha" placeholder="Senha" formControlName="senha"></ion-input>
-    <ion-note slot="end" color="danger" *ngIf="senha.dirty && senha.hasError('required')"> 
+    <ion-input type="password" placeholder="Senha" formControlName="password"></ion-input>
+    <ion-note slot="end" color="danger" *ngIf="password.dirty && password.hasError('required')"> 
       Campo obrigatório
     </ion-note>
-    <ion-note slot="end" color="danger" *ngIf="senha.dirty && senha.hasError('minlength')"> 
+    <ion-note slot="end" color="danger" *ngIf="password.dirty && password.hasError('minlength')"> 
       Senha com mínimo de 6 caracteres
   </ion-note>
   </ion-item>

@@ -10,9 +10,28 @@
 </ion-header>
 
 <ion-content>
-    <div class="absoluto">
-    <h4><strong>Sistema de Controle de Arboviroses</strong></h4><br>
+  <div>
+  <h4><strong>Sistema de Controle de Arboviroses</strong></h4><br>
+    <form style="padding-top: 20px; padding-bottom: 20px;">
+        <ion-item>
+            <ion-label>Selecionar Paciente</ion-label>
+            <ion-select okText="Ok" cancelText="cancelar">
+              <ion-select-option>Paciente 1</ion-select-option>
+              <ion-select-option>Paciente 2</ion-select-option>
+              <ion-select-option >Paciente 3</ion-select-option>
+              <ion-select-option>Paciente 4</ion-select-option>
+              <ion-select-option>Paciente 5</ion-select-option>
+              <ion-select-option>Paciente 6</ion-select-option>
+              <ion-select-option>Paciente 7</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-button color="light" shape="round" >Novo Paciente
+          <ion-icon slot="start" name="add"></ion-icon>
+          </ion-button>
+
+  </form>
     </div>
+    <ion-item-sliding></ion-item-sliding>
       <ion-button size="full" color="secondary" (click)="casoSuspeito()"
       >Iniciar Atendimento</ion-button><br>
       <ion-button size="full" fill="clear" color="dark" (click)="modalSobre()" >

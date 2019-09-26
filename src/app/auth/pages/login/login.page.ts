@@ -1,8 +1,11 @@
 import { AuthProvider } from './../../../services/auth.types';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
+import { NavController } from '@ionic/angular';
+
 import { AuthService } from 'src/app/services/auth.service';
 import { OverlayService } from 'src/app/services/overlay.service';
+
 
 @Component({
   selector: 'app-login',
@@ -18,11 +21,13 @@ export class LoginPage implements OnInit {
     action: 'Entrar',
     actionChange: 'Criar Conta'
   };
-  private nameControl = new FormControl('', [Validators.required, Validators.minLength(8)])
+  private nameControl = new FormControl('', [Validators.required, Validators.minLength(3)])
 
   constructor(private authService: AuthService, 
     private fb: FormBuilder,
-    private overlayService: OverlayService) { }
+    private navCtrl: NavController,
+    private overlayService: OverlayService,
+    ) { }
 
   ngOnInit(): void {
     this.createForm();
@@ -63,8 +68,9 @@ export class LoginPage implements OnInit {
         user: this.authForm.value,
         provider
       });
-      console.log('Autenticado => ', credentials)
-      console.log('Redirect ')
+      this.navCtrl.navigateForward('/home')
+     /*  console.log('Autenticado => ', credentials)
+      console.log('Redirect ') */
     } catch(e) {
       console.log('Erro autenticação =>', e)
       await this.overlayService.toast({

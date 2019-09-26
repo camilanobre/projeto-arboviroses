@@ -4,7 +4,7 @@ import {  ActivatedRouteSnapshot, CanActivate,
           CanActivateChild, CanLoad, Route, Router, 
           RouterStateSnapshot, UrlSegment } from '@angular/router';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { take, tap} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +21,10 @@ canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Obs
   return this.canActivate(route, state);
 }
 
-canLoad(route: Route, segments: UrlSegment[]): Observable<boolean>
+canLoad(route: Route, segments: UrlSegment[]): Observable<boolean> {
+  const url = segments.map(s => `/${s}`).join('');
+  return this.checkAutState(url).pipe(take(1));
+}
 
   private checkAutState(redirect: string): Observable<boolean>{
     return this.authService.isAuthenticated.pipe(

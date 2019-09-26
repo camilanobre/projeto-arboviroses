@@ -15,6 +15,7 @@ const routes: Routes = [
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
   }, 
+  { path: 'login', loadChildren: './auth/auth.module#AuthModule' },
   { path: 'modal-sobre', loadChildren: './modal-sobre/modal-sobre.module#ModalSobrePageModule' },
   { path: 'modal-duvidas', loadChildren: './modal-duvidas/modal-duvidas.module#ModalDuvidasPageModule' },
   { path: 'caso-suspeito', loadChildren: './caso-suspeito/caso-suspeito.module#CasoSuspeitoPageModule' },
@@ -29,8 +30,7 @@ const routes: Routes = [
   { path: 'conduta2a', loadChildren: './conduta2a/conduta2a.module#Conduta2aPageModule' },
   { path: 'conduta2b', loadChildren: './conduta2b/conduta2b.module#Conduta2bPageModule' },
   { path: 'sobre', loadChildren: './sobre/sobre.module#SobrePageModule' },
-  { path: 'duvidasfrequentes', loadChildren: './duvidasfrequentes/duvidasfrequentes.module#DuvidasfrequentesPageModule' },
-  { path: 'login', loadChildren: './auth/pages/login/login.module#LoginPageModule' }
+  { path: 'duvidasfrequentes', loadChildren: './duvidasfrequentes/duvidasfrequentes.module#DuvidasfrequentesPageModule' }
 ];
 
 @NgModule({

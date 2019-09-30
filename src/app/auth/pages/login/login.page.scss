@@ -1,4 +1,16 @@
-/* ion-content{
+ion-content{
 
-    --ion-background-color: linear-gradient(to top, #d1eeee, #d9f1f3, #e1f5f7, #eaf8fb, #f2fcfe);
-} */
+    --ion-background-color:linear-gradient(to top, #30cfd0 0%, #330867 100%);
+} 
+ion-item{
+    --ion-item-background: transparent !important
+}
+
+.button {
+    color: black !important;
+    --background: linear-gradient(to right, #30cfd0, #00a4ca, #0076bc, #00469c, #330867);
+
+}
+.ion-color-favorite {
+  --ion-color-base: var(--ion-color-favorite);
+}

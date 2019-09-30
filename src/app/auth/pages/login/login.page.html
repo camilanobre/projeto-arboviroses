@@ -1,7 +1,7 @@
 <ion-content padding>
 
 <h1 text-center>
-<ion-icon name="pulse" class="icon-7em"></ion-icon>
+<ion-icon name="pulse" color="favorite" class="icon-7em"></ion-icon>
 </h1>
 
 <form [formGroup]="authForm" 
@@ -39,7 +39,7 @@
       Senha com mínimo de 6 caracteres
   </ion-note>
   </ion-item>
-  <ion-button expand="block" type="submit" [disabled]="authForm.invalid">{{ configs.action }}</ion-button>
+  <ion-button expand="block" type="submit" [disabled]="authForm.invalid" class="button">{{ configs.action }}</ion-button>
 </form>
 
 <ion-button expand="block" fill="clear" (click)="changeAuthAction()">

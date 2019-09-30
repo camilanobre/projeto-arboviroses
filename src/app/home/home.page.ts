@@ -1,3 +1,4 @@
+import { PacientesService } from './services/pacientes.service';
 import { Home } from './models/home.model';
 import { Component } from '@angular/core';
 import { NavController, ModalController } from '@ionic/angular';
@@ -15,15 +16,14 @@ export class HomePage {
 
   home$: Observable<Home[]>;
 
-  constructor(private nav : NavController,
+  constructor(
+  private pacientesService: PacientesService,
+  private nav : NavController,
   private modalController : ModalController,
-  private router : Router) {}
+  private router : Router,) {}
 
-  ngOnInit():void {
-    this.home$ = of([
-      { id: '354534', nome: ' paciente 1 ', done: false },
-      { id: '545422', nome: ' paciente 2 ', done: false }
-    ]);
+  ionViewDidEnter():void {
+    this.home$ = this.pacientesService.getAll();
   }
 
   async modalSobre(){

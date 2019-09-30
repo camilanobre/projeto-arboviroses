@@ -55,7 +55,8 @@ ion-icon{
   font-size: 30px;
 }
 ion-toolbar{
-  background: linear-gradient(to right, #87CEFA, #0cd1e8)!important
+  background: #B3E5FC
+  //linear-gradient(to right, #87CEFA, #0cd1e8)!important
   //linear-gradient(to right, #D1EEEE, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .header-md:after{
@@ -64,5 +65,6 @@ ion-toolbar{
 }
 
 .icon-7em{
-  font-size: 7em
+  font-size: 7em;
+  background-color: -webkit-linear-gradient(-180deg,#1cb2d3 0,#77ecdb 100%) !important
 }

@@ -7,9 +7,8 @@ import { Home } from '../../models/home.model';
   styleUrls: ['./home-item.component.scss'],
 })
 export class HomeItemComponent{
-
-@Input() home: Home;
-@Output() done = new EventEmitter<Home>(); 
-@Output() update = new EventEmitter<Home>(); 
-@Output() delete = new EventEmitter<Home>(); 
+  @Input() home: Home;
+  @Output() done = new EventEmitter<Home>();
+  @Output() update = new EventEmitter<Home>();
+  @Output() delete = new EventEmitter<Home>();
 }

@@ -1,0 +1,17 @@
+<ion-item-sliding #sliding>
+  <ion-item (click)="update.emit(nome)">
+     {{home.nome}}
+     <ion-toggle slot="end" color="primary" 
+     [checked]="nome.done" (ionChange)="done.emit(nome)"
+     (click)="$event.stopPropagation()"
+     ></ion-toggle>
+    </ion-item>
+    <ion-item-options side="start" (click)="update.emit(nome); sliding.close">
+      <ion-item-option>
+        <ion-icon slot="icon-only" name="create"></ion-icon>
+      </ion-item-option>
+    <ion-item-option color="danger" (click)="delete.emit(nome); sliding.close">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+</ion-item-sliding>

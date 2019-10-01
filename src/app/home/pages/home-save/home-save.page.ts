@@ -1,5 +1,6 @@
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
-import { ModalController, NavController } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home-save',
@@ -8,11 +9,24 @@ import { ModalController, NavController } from '@ionic/angular';
 })
 export class HomeSavePage{
 
-  constructor(private nav : NavController,
-    private modalController: ModalController) { }
+  pacienteForm: FormGroup
 
-    closeModal(){
-      this.modalController.dismiss();
-    }
+  constructor(private nav : NavController,
+                      private fb: FormBuilder) 
+  { }
+
+  ngOnInit():void {
+    this.createForm();
+  }
+
+  private createForm(): void {
+    this.pacienteForm = this.fb.group({
+      nome: ['', [Validators.required, Validators.minLength(5)]]
+    })
+  }
+
+  onSubmit(): void {
+    console.log('cadastro de paciente => ' , this.pacienteForm.value )
+  }
 
 }

@@ -42,13 +42,6 @@ export class HomePage {
     });
     modal.present()
   }
-  async modalNovoPaciente(){
-    const modal = await this.modalController.create({
-      component: HomeSavePage,
-      cssClass: 'my-custom-modal-css'
-    });
-    modal.present()
-  }
   casoSuspeito(){
     this.router.navigate(['caso-suspeito']);
   }

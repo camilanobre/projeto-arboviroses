@@ -1,9 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>homeSave</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar color="toolbar">
+      <ion-title>Novo Paciente</ion-title>
+      <ion-buttons slot="start">
+     <ion-back-button defaultHref="/home"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content>
-
-</ion-content>
+  <ion-content padding>
+ <form [formGroup]="pacienteForm" 
+       (submit)="onSubmit()">
+    <ion-item>
+        <ion-icon name="person-add" slot="start" color="primary"></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Digite o nome"
+          autofocus="true"
+          inputmode="text"
+          formControlName="nome"
+        >
+        </ion-input>
+      </ion-item>
+      <ion-button size="full" type="submit"
+       [disabled]="pacienteForm.invalid">
+        Salvar
+      </ion-button>
+ </form>
+<!--     <ion-button shape="round" fill="outline" color="secondary" routerLink="/home">
+      <ion-icon name="arrow-round-back"></ion-icon>Voltar
+    </ion-button> -->
+  </ion-content>

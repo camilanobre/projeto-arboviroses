@@ -1,9 +1,25 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>pacientes</ion-title>
+  <ion-toolbar color="toolbar">
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Pacientes</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
+<ion-content padding>
+  <h3>Lista de pacientes atendidos</h3>
+  <ion-list *ngIf="(home$ | async ) as paciente">
+    <ng-container *ngIf="paciente.length > 0; else noPac">
+        <app-home-item *ngFor="let home of paciente">{{home.nome}}</app-home-item>
+    </ng-container>
+    <ng-template #noPac>
+      <ion-item lines="nome "> Nenhum paciente cadastrado!</ion-item>
+    </ng-template>
+  </ion-list>
+ 
+<br>
+    <ion-button shape="round" fill="outline" color="secondary" routerLink="/home">
+      <ion-icon name="arrow-round-back"></ion-icon>Voltar
+    </ion-button>
 
 </ion-content>

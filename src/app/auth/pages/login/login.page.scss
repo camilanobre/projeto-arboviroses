@@ -7,10 +7,14 @@ ion-item{
 }
 
 .button {
-    color: black !important;
+    //color: black !important;
     --background: linear-gradient(to right, #30cfd0, #00a4ca, #0076bc, #00469c, #330867);
+    --color: white
 
 }
 .ion-color-favorite {
   --ion-color-base: var(--ion-color-favorite);
+}
+ion-input{
+    --placeholder-color: white
 }

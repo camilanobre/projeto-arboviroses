@@ -22,7 +22,9 @@
               <ion-select-option *ngFor="let home of (home$ | async)">{{home.nome}}</ion-select-option>
             </ion-select>
           </ion-item>
-          <ion-button color="light" shape="round" >Novo Paciente
+          <ion-button color="light" shape="round" 
+                      (click)="modalNovoPaciente()" >
+            Novo Paciente
           <ion-icon slot="start" name="add"></ion-icon>
           </ion-button>
 

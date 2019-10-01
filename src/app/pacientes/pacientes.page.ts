@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { PacientesService } from '../home/services/pacientes.service';
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Home } from '../home/models/home.model';
+
 
 @Component({
   selector: 'app-pacientes',
   templateUrl: './pacientes.page.html',
   styleUrls: ['./pacientes.page.scss'],
 })
-export class PacientesPage implements OnInit {
+export class PacientesPage {
+  home$: Observable<Home[]>;
 
-  constructor() { }
+  constructor(
+    private pacientesService: PacientesService,
+  ) { }
 
-  ngOnInit() {
+  ionViewDidEnter():void {
+    this.home$ = this.pacientesService.getAll();
   }
 
 }

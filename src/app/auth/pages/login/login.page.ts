@@ -74,7 +74,8 @@ export class LoginPage implements OnInit {
     } catch(e) {
       console.log('Erro autenticação =>', e)
       await this.overlayService.toast({
-        message: e.message
+        message: 'Erro de Autenticação! Verifique se o usuário foi informado corretamente!',
+        //message: e.message
       });
     } finally{
       loading.dismiss();

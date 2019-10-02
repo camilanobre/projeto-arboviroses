@@ -1,3 +1,5 @@
+import { OverlayService } from './../../../services/overlay.service';
+import { PacientesService } from './../../services/pacientes.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
@@ -11,8 +13,10 @@ export class HomeSavePage{
 
   pacienteForm: FormGroup
 
-  constructor(private nav : NavController,
-                      private fb: FormBuilder) 
+  constructor(private navCtrl : NavController,
+              private fb: FormBuilder,
+              private overlayService : OverlayService,
+              private pacientesService: PacientesService) 
   { }
 
   ngOnInit():void {
@@ -25,8 +29,22 @@ export class HomeSavePage{
     })
   }
 
-  onSubmit(): void {
-    console.log('cadastro de paciente => ' , this.pacienteForm.value )
+  async onSubmit(): Promise<void> {
+    const loading = await this.overlayService.loading({
+      message: 'Salvando...'
+    })
+    try{
+      const paciente = await this.pacientesService.create(this.pacienteForm.value);
+      console.log('paciente criado => ', paciente);
+      this.navCtrl.navigateBack('/home');
+    } catch(error){
+      console.log('erro ao salvar => ', error)
+      await this.overlayService.toast({
+        message: 'Erro ao salvar'
+      });
+    } finally {
+      loading.dismiss();
+    }
   }
 
 }

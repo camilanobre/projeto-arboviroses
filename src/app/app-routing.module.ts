@@ -31,8 +31,8 @@ const routes: Routes = [
   { path: 'conduta2b', loadChildren: './conduta2b/conduta2b.module#Conduta2bPageModule' },
   { path: 'sobre', loadChildren: './sobre/sobre.module#SobrePageModule' },
   { path: 'duvidasfrequentes', loadChildren: './duvidasfrequentes/duvidasfrequentes.module#DuvidasfrequentesPageModule' },
-  { path: 'pacientes', loadChildren: './pacientes/pacientes.module#PacientesPageModule' },
-  { path: 'home-save', loadChildren: './home/pages/home-save/home-save.module#HomeSavePageModule' }
+  { path: 'home-save', loadChildren: './home/pages/home-save/home-save.module#HomeSavePageModule' },
+  { path: 'pacientes', loadChildren: './home/pages/pacientes/pacientes.module#PacientesPageModule' }
 ];
 
 @NgModule({

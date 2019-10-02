@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-import { ComponentsModule } from '../home/components/components.module';
+
 import { IonicModule } from '@ionic/angular';
 
 import { PacientesPage } from './pacientes.page';
+import { ComponentsModule } from '../../components/components.module';
 
 const routes: Routes = [
   {
@@ -18,8 +19,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
     ComponentsModule,
+    IonicModule,
     RouterModule.forChild(routes)
   ],
   declarations: [PacientesPage]

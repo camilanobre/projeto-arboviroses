@@ -29,7 +29,7 @@
 
 
  ion-title, h1, h2, h3, h4, h5{
-  font-family: 'Red Hat Display';
+    font-family: 'Darker Grotesque', sans-serif;
     text-align: center;
  }
  .my-custom-modal-css .modal-wrapper {
@@ -68,4 +68,8 @@ ion-toolbar{
 .icon-7em{
   font-size: 7em;
   background-color: -webkit-linear-gradient(-180deg,#1cb2d3 0,#77ecdb 100%) !important
+}
+
+.ion-color-voltar {
+  --ion-color-base: var(--ion-color-voltar);
 }

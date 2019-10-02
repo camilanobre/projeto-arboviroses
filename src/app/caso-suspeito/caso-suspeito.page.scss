@@ -5,7 +5,7 @@ ion-icon{
   padding-right: 15px;
 }
 p{
-  font-family: 'Red Hat Display';
+  font-family: 'Darker Grotesque', sans-serif;
   text-align: justify
 }
 h3{
@@ -13,4 +13,7 @@ h3{
 }
 .botao{
   padding-left: 92px;
+}
+.ion-color-voltar {
+  --ion-color-base: var(--ion-color-voltar);
 }

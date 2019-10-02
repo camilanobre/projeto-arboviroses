@@ -8,8 +8,11 @@ import { PacientesService } from '../../services/pacientes.service';
   templateUrl: './pacientes.page.html',
   styleUrls: ['./pacientes.page.scss'],
 })
+
 export class PacientesPage  {
+  nome: Home[] = [];
   home$: Observable<Home[]>;
+  buscaNome = ''
 
   constructor(
   private pacientesService: PacientesService,
@@ -21,6 +24,7 @@ export class PacientesPage  {
 
   buscarPacientes ( event ) {
     const texto = event.target.value;
+    this.buscaNome = texto
     console.log(texto);
   }
 }

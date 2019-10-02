@@ -18,4 +18,9 @@ export class PacientesPage  {
   ionViewDidEnter():void {
     this.home$ = this.pacientesService.getAll();
   }
+
+  buscarPacientes ( event ) {
+    const texto = event.target.value;
+    console.log(texto);
+  }
 }

@@ -11,10 +11,16 @@
   Lista de pacientes atendidos
   <ion-icon slot="end" name="done-all"></ion-icon>
 </h3>
-<ion-searchbar placeholder="Pesquisar pacientes"
+<ion-toolbar>
+  <ion-searchbar 
+              placeholder="Pesquisar pacientes..."
+              animated
               type="text"
-              showCancelButton>
+              showCancelButton
+              (ionChange)="buscarPacientes( $event )">
 </ion-searchbar>
+</ion-toolbar>
+
 <ion-list>
     <app-home-item *ngFor="let home of (home$ | async)" [home]="home"></app-home-item>
 </ion-list> 

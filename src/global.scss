@@ -73,3 +73,7 @@ ion-toolbar{
 .ion-color-voltar {
   --ion-color-base: var(--ion-color-voltar);
 }
+
+ion-content.background{
+  --background: url(/assets/img/4.jpg) no-repeat center/cover fixed;
+}

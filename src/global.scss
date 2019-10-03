@@ -24,12 +24,11 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
-@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Mako&display=swap');
 
-
-
- ion-title, h1, h2, h3, h4, h5{
-    font-family: 'Darker Grotesque', sans-serif;
+ ion-title, h1, h2, h3, h4, h5,p, ion-item, ion-button, ion-label{
+  // font-family: 'Nunito', sans-serif;
+  font-family: 'Mako', sans-serif;
     text-align: center;
  }
  .my-custom-modal-css .modal-wrapper {
@@ -56,7 +55,7 @@ ion-icon{
   font-size: 30px;
 }
 ion-toolbar{
-  background: #B3E5FC
+  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   //linear-gradient(to right, #87CEFA, #0cd1e8)!important
   //linear-gradient(to right, #D1EEEE, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
@@ -75,5 +74,5 @@ ion-toolbar{
 }
 
 ion-content.background{
-  --background: url(/assets/img/4.jpg) no-repeat center/cover fixed;
+  --background: url(/assets/img/img.jpg) no-repeat center/cover fixed;
 }

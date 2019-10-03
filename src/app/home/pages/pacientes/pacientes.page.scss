@@ -11,3 +11,10 @@
 div.item-native{
   --background: transparent
 }
+ion-content{
+
+  --ion-background-color:  linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+}
+ion-item{
+  --ion-item-background: transparent !important
+}

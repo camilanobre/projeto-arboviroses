@@ -35,10 +35,10 @@ export class PacientesSalvarPage implements OnInit {
     })
     try{
       const paciente = await this.pacientesService.create(this.pacienteForm.value);
-      console.log('paciente criado => ', paciente);
+     //  console.log('paciente criado => ', paciente);
       this.navCtrl.navigateBack('/pacientes');
     } catch(error){
-      console.log('erro ao salvar => ', error)
+     //  console.log('erro ao salvar => ', error)
       await this.overlayService.toast({
         message: 'Erro ao salvar'
       });

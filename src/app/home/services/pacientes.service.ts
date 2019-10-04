@@ -4,6 +4,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { AuthService } from './../../services/auth.service';
 import { Firestore } from 'src/app/classes/firestore.class';
 import { Home } from './../models/home.model';
+import { firestore } from 'firebase';
 
 
 @Injectable({
@@ -19,7 +20,9 @@ export class PacientesService extends Firestore<Home>{
 private init(): void {
     this.authService.authState$.subscribe(user =>{
       if ( user ){
-        this.setCollection(`/users/${user.uid}/pacientes`);
+        this.setCollection(`/users/${user.uid}/pacientes`, (ref: firestore.CollectionReference) => {
+          return ref.orderBy('nome', 'asc')
+        });
         return;
       }
       this.setCollection(null);

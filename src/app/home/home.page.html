@@ -17,32 +17,35 @@
         [home]="home"></app-home-item> -->
         <ion-item>
             <ion-label>Selecionar Paciente</ion-label>
-            <ion-select okText="Ok" cancelText="cancelar">
-                
-              <ion-select-option *ngFor="let home of (home$ | async)">{{home.nome}}</ion-select-option>
+            <ion-select okText="Ok" 
+            cancelText="cancelar">
+              <ion-select-option 
+              *ngFor="let home of (home$ | async)"
+              >{{home.nome}}
+            </ion-select-option>
             </ion-select>
           </ion-item>
-          <ion-button color="azul" shape="round"
-                      class="button" 
-                      routerLink="/home-save" 
-                      routerDirection="forward">
+          <ion-button 
+              color="azul" shape="round"
+              class="button" 
+              routerLink="/home-save" 
+              routerDirection="forward">
             Novo Paciente
           <ion-icon slot="start" name="add"></ion-icon>
-          </ion-button>
-
-  </form>
-    </div>
-    <ion-item-sliding></ion-item-sliding>
-      <ion-button size="full" color="botao" 
-      (click)="casoSuspeito()"
-      >Iniciar Atendimento</ion-button><br>
-      <ion-button size="full" fill="clear" color="dark" (click)="modalSobre()" >
-          Sobre o Aplicativo
-          <ion-icon  color="dark" name="information-circle"></ion-icon>
-        </ion-button><br>
-        <ion-button size="full" fill="clear" 
-        color="dark" (click)="modalDuvidas()">
-            Dúvidas Frequentes
-            <ion-icon name="help-circle"></ion-icon>
-          </ion-button>
-</ion-content>
+        </ion-button>
+          </form>
+            </div>
+            <ion-item-sliding></ion-item-sliding>
+              <ion-button size="full" color="botao" 
+              (click)="casoSuspeito()"
+              >Iniciar Atendimento</ion-button><br>
+              <ion-button size="full" fill="clear" color="dark" (click)="modalSobre()" >
+                  Sobre o Aplicativo
+                  <ion-icon  color="dark" name="information-circle"></ion-icon>
+                </ion-button><br>
+                <ion-button size="full" fill="clear" 
+                color="dark" (click)="modalDuvidas()">
+                    Dúvidas Frequentes
+                    <ion-icon name="help-circle"></ion-icon>
+                  </ion-button>
+        </ion-content>

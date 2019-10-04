@@ -28,16 +28,13 @@
     <ion-icon slot="start" name="add"></ion-icon>
   </ion-button>
 <ion-list>
-    <app-home-item *ngFor="let home of (home$ | async) | filtro:buscaNome" [home]="home"></app-home-item>
+    <app-home-item 
+      *ngFor="let home of (home$ | async) | filtro:buscaNome" 
+      [home]="home"
+      (update)="onUpdate($event)"
+      (delete)="onDelete($event)">
+  </app-home-item>
 </ion-list> 
-<!--   <ion-list *ngIf="(home$ | async ) as paciente">
-    <ng-container *ngIf="paciente.length > 0; else noPac">
-        <app-home-item *ngFor="let home of paciente"></app-home-item>
-    </ng-container>
-    <ng-template #noPac>
-      <ion-item lines="none "> Nenhum paciente cadastrado!</ion-item>
-    </ng-template> 
-  </ion-list>  -->
 <br>
     <ion-button shape="round" color="voltar" routerLink="/home">
       <ion-icon name="arrow-round-back"></ion-icon>Voltar

@@ -13,7 +13,7 @@ export class FiltroPipe implements PipeTransform {
     texto = texto.toLocaleLowerCase();
 
     return nome.filter( nomePac => {
-      return nomePac.nome.includes(texto);
+      return nomePac.nome.toLocaleLowerCase().includes(texto);
     });
   }
 

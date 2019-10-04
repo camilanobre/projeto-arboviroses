@@ -4,14 +4,18 @@ ion-item:hover{
 p{
     text-align: justify;
     font-size: 14px;
-    font-family: 'Darker Grotesque', sans-serif;
+    font-family: 'Barlow', sans-serif;
 }
 .pCenter{
     text-align: center;
     font-size: 18px;
-    font-family: 'Darker Grotesque', sans-serif;
+    font-family: 'Barlow', sans-serif;
     font-weight: bold;
 }
 ion-title{
     font-weight: bold;
 }
+ion-content{
+
+    --ion-background-color: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  }

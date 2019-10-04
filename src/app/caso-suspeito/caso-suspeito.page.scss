@@ -4,8 +4,12 @@ ion-item:hover{
 ion-icon{
   padding-right: 15px;
 }
+ion-content{
+
+  --ion-background-color: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
 p{
-  font-family: 'Darker Grotesque', sans-serif;
+  font-family: 'Barlow', sans-serif;
   text-align: justify
 }
 h3{

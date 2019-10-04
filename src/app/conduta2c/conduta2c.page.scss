@@ -1,18 +1,21 @@
 ion-item:hover{
     cursor: pointer;
   }
+ion-content{
 
+    --ion-background-color: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  }
 p{
-  font-family: 'Darker Grotesque', sans-serif;
+  font-family: 'Barlow', sans-serif;
   text-align: center;
   font-weight: bold;
 }
 h3{
   font-weight: bold;
-  font-family: 'Darker Grotesque', sans-serif;
+  font-family: 'Barlow', sans-serif;
 }
 li{
-font-family: 'Darker Grotesque', sans-serif;  
+  font-family: 'Barlow', sans-serif;  
 }
 .botao{
   padding-left: 90px;

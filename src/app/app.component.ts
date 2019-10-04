@@ -1,3 +1,4 @@
+import { AuthService } from './services/auth.service';
 import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
@@ -11,6 +12,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent {
 
+  user: firebase.User;
+
   public appPages = [
     { title: 'Home', url: '/home', icon: 'ios-home' },
     { title: 'Pacientes', url: '/pacientes', icon: 'contacts' },
@@ -20,6 +23,7 @@ export class AppComponent {
   ];
 
   constructor(
+    private authService: AuthService,
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar
@@ -28,7 +32,7 @@ export class AppComponent {
   }
 
   initializeApp() {
-    this.platform.ready().then(() => {
+   this.authService.authState$.subscribe(user => (this.user = user));    this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });

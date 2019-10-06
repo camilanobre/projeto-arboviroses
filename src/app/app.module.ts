@@ -26,7 +26,7 @@ import { DuvidaChoqueAlarmePageModule } from './duvida-choque-alarme/duvida-choq
     IonicModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFirestoreModule,
+    AngularFirestoreModule.enablePersistence(),
     AppRoutingModule,
     ModalSobrePageModule,
     ModalDuvidasPageModule,

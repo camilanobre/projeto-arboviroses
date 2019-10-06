@@ -8,6 +8,13 @@
   </ion-header>
   
   <ion-content padding>
+      <ion-grid>
+          <ion-row justify-content-center>
+              <ion-col 
+               size-sm="10" 
+                size-md="6" 
+                size-lg="4" 
+                size-xl="4">
     <h3>Atendimento de caso suspeito</h3>
     <p><strong>Solicitar:</strong>
       Hemograma completo,proteína, abulmina, tipagem sanguínea, sorologia e isolamento viral.<br>
@@ -17,10 +24,10 @@
       <strong>Repouso.</strong>
     </p>
     <h5><strong>O sinal é de choque ou alarme?</strong></h5>
-    <div class="botao">
+    <ion-row justify-content-center >
     <ion-button size="medium" color="warning" (click)="conduta2c()">Alarme</ion-button>
     <ion-button size="medium" color="danger" (click)="conduta2d()">Choque</ion-button>
-  </div>
+    </ion-row>
     <ion-button size="full" fill="clear" color="dark" (click)="modalChoqueAlarme()">
         O que é sinal de choque/alarme
         <ion-icon  color="dark" name="information-circle"></ion-icon>
@@ -29,5 +36,7 @@
       <ion-button shape="round" color="voltar" routerLink="/caso-suspeito">
         <ion-icon name="arrow-round-back"></ion-icon>Voltar
       </ion-button>
-  
+  </ion-col>
+  </ion-row>
+      </ion-grid>
   </ion-content>

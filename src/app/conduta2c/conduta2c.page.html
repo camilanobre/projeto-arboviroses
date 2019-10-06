@@ -8,6 +8,13 @@
   </ion-header>
   
   <ion-content padding>
+      <ion-grid>
+          <ion-row justify-content-center>
+              <ion-col 
+               size-sm="10" 
+                size-md="6" 
+                size-lg="4" 
+                size-xl="4">
     <h4><strong>Atendimento de caso com sinais de alarme</strong></h4>
 <ul>
   <li>Leito de internação( no mínimo 48 hs )</li>
@@ -18,14 +25,16 @@
     DV e PA estáveis?<br>
     Diurese normal?
     Queda Ht?</p>
-    <div class="botao">
+    <ion-row justify-content-center >
     <ion-button size="medium" color="success" (click)="avaliarAlta()">Sim</ion-button>
     <ion-button size="medium" color="warning" (click)="naoAlta()">Não</ion-button>
-  </div>
+    </ion-row>
       <br>
       <ion-button shape="round" color="voltar" routerLink="/conduta1b">
         <ion-icon name="arrow-round-back"></ion-icon>Voltar
       </ion-button>
-  
+  </ion-col>
+  </ion-row>
+  </ion-grid>
   </ion-content>
 

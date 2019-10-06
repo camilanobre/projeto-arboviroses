@@ -8,6 +8,13 @@
   </ion-header>
   
   <ion-content padding>
+      <ion-grid>
+      <ion-row justify-content-center>
+          <ion-col 
+           size-sm="10" 
+            size-md="6" 
+            size-lg="4" 
+            size-xl="4">
     <p><strong>Laboratório:</strong>
       Hemograma completo, sorologia ou isolamento viral. <br>
       <u>Forte indício de FA?</u> Adicionar coagulograma (RNI, PTTa, PT), TGO, TGP, Bb,
@@ -17,14 +24,16 @@
       <strong>Sintomáticos:</strong> Dipirona e Paracetamol. NÃO UTILIZAR AAS, AINEs. Antiemético SOS.
     </p>
     <h4>Ht normal?</h4>
-    <div class="botao">
+    <ion-row justify-content-center >
       <ion-button size="medium" color="success" (click)="conduta2a()">Sim</ion-button>
       <ion-button size="medium" color="danger" (click)="conduta2b()">Não</ion-button>  
-    </div>
+    </ion-row>
       <br>
       <ion-button shape="round" color="voltar" (click)=" voltar()">
         <ion-icon name="arrow-round-back"></ion-icon>Voltar
       </ion-button>
-  
+  </ion-col>
+  </ion-row>
+ </ion-grid>
   </ion-content>
 

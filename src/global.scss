@@ -38,8 +38,10 @@
    padding-right: 10px;
    padding-left: 10px;
    display: block; 
-   --background: linear-gradient(to top, #dfe9f3 0%, white 100%);
  }
+ion-button{
+  font-weight: bold
+}
  ion-button:hover {
   cursor: pointer;
 }
@@ -73,6 +75,7 @@ ion-icon{
 
 .ion-color-voltar {
   --ion-color-base: var(--ion-color-voltar);
+  font-weight: bold
 }
 
 ion-content.background{

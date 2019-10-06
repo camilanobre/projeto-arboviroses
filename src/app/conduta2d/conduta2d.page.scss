@@ -11,6 +11,9 @@ h3{
   font-family: 'Barlow', sans-serif;
 }
 ion-content{
-
   --ion-background-color: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+ion-button {
+  font-weight: bold
 }

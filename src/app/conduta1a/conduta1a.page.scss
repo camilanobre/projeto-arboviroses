@@ -14,3 +14,11 @@ ion-content{
 
   --ion-background-color: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
+.ion-color-verde {
+  --ion-color-base: var(--ion-color-verde);
+  font-weight:bold
+}
+.ion-color-vermelho {
+  --ion-color-base: var(--ion-color-vermelho);
+  font-weight:bold
+}

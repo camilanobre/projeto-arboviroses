@@ -22,7 +22,7 @@
 </ion-toolbar>
   <ion-button color="azul" shape="round"
             class="button" 
-            routerLink="/pacientes-salvar" 
+            routerLink="/create" 
             routerDirection="forward">
             Novo Paciente
     <ion-icon slot="start" name="add"></ion-icon>
@@ -31,7 +31,6 @@
     <app-home-item 
       *ngFor="let home of (home$ | async) | filtro:buscaNome" 
       [home]="home"
-      (update)="onUpdate($event)"
       (delete)="onDelete($event)">
   </app-home-item>
 </ion-list> 

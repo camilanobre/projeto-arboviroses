@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="toolbar">
-    <ion-title>Novo Paciente</ion-title>
+    <ion-title>{{ pageTitle }}</ion-title>
     <ion-buttons slot="start">
    <ion-back-button defaultHref="/pacientes"></ion-back-button>
     </ion-buttons>
@@ -14,17 +14,19 @@
       <ion-icon name="person-add" slot="start" color="dark"></ion-icon>
       <ion-input
         type="text"
-        placeholder="Digite o nome"
+        placeholder="Informe o nome do paciente"
         autofocus="true"
         inputmode="text"
         formControlName="nome"
       >
       </ion-input>
     </ion-item>
+    <ion-row justify-content-center>
     <ion-button size="full" type="submit"
      [disabled]="pacienteForm.invalid">
       Salvar
     </ion-button>
+  </ion-row>
 </form>
 <!--     <ion-button shape="round" fill="outline" color="secondary" routerLink="/home">
     <ion-icon name="arrow-round-back"></ion-icon>Voltar

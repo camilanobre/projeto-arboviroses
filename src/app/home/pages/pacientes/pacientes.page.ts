@@ -30,7 +30,7 @@ export class PacientesPage  {
   }
 
   onUpdate(home: Home):void { 
-    this.navCtrl.navigateForward(['pacientes-salvar', home.id])
+    this.navCtrl.navigateForward(`/edit/${home.id}`)
   }
   async onDelete(home: Home): Promise<void> {
     await this.overlayService.alert({

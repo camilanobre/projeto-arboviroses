@@ -3,6 +3,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NavController } from '@ionic/angular';
 import { OverlayService } from 'src/app/services/overlay.service';
 import { PacientesService } from '../../services/pacientes.service';
+import { ActivatedRoute } from '@angular/router';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-pacientes-salvar',
@@ -11,16 +13,36 @@ import { PacientesService } from '../../services/pacientes.service';
 })
 export class PacientesSalvarPage implements OnInit {
 
-  pacienteForm: FormGroup
+  pacienteForm: FormGroup;
+  pageTitle = '...';
+  pacienteId: string = undefined
 
   constructor(private navCtrl : NavController,
               private fb: FormBuilder,
               private overlayService : OverlayService,
+              private route: ActivatedRoute,
               private pacientesService: PacientesService) 
   { }
 
   ngOnInit():void {
     this.createForm();
+    this.init();
+  }
+
+  init(): void {
+    const pacienteId = this.route.snapshot.paramMap.get('id');
+    if (!pacienteId) {
+      this.pageTitle = 'Novo Paciente';
+      return;
+    }
+    this.pacienteId = pacienteId;
+    console.log('id => ', pacienteId)
+    this.pageTitle = 'Editar Paciente';
+    this.pacientesService.get(pacienteId)
+      .pipe(take(1))
+      .subscribe(({ nome })=> {
+        this.pacienteForm.get('nome').setValue(nome)
+      })
   }
 
   private createForm(): void {

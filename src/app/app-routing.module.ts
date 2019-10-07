@@ -33,7 +33,9 @@ const routes: Routes = [
   { path: 'duvidasfrequentes', loadChildren: './duvidasfrequentes/duvidasfrequentes.module#DuvidasfrequentesPageModule' },
   { path: 'home-save', loadChildren: './home/pages/home-save/home-save.module#HomeSavePageModule' },
   { path: 'pacientes', loadChildren: './home/pages/pacientes/pacientes.module#PacientesPageModule' },
-  { path: 'pacientes-salvar', loadChildren: './home/pages/pacientes-salvar/pacientes-salvar.module#PacientesSalvarPageModule' },
+  { path: 'create', loadChildren: './home/pages/pacientes-salvar/pacientes-salvar.module#PacientesSalvarPageModule' },
+  { path: 'edit/:id', loadChildren: './home/pages/pacientes-salvar/pacientes-salvar.module#PacientesSalvarPageModule' }
+
 ];
 
 @NgModule({

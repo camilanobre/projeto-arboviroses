@@ -20,3 +20,6 @@ ion-toolbar{
     //background: linear-gradient(to right, #CFDEF3, #E0EAFC)
     background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     }
+    .ion-color-footer {
+        --ion-color-base: var(--ion-color-footer);
+      }

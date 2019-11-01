@@ -19,3 +19,17 @@ ion-content{
 
     --ion-background-color: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
+
+ion-avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px
+  
+  }
+  ion-title {
+    font-size: 15px;
+    font-weight: bold
+  }
+  .ion-color-footer {
+    --ion-color-base: var(--ion-color-footer)
+  }

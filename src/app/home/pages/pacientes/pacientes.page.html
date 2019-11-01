@@ -31,6 +31,7 @@
     <app-home-item 
       *ngFor="let home of (home$ | async) | filtro:buscaNome" 
       [home]="home"
+      (update)="onUpdate($event)"
       (delete)="onDelete($event)">
   </app-home-item>
 </ion-list> 

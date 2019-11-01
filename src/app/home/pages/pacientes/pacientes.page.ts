@@ -32,6 +32,8 @@ export class PacientesPage  {
   onUpdate(home: Home):void { 
     this.navCtrl.navigateForward(`/edit/${home.id}`)
   }
+
+  
   async onDelete(home: Home): Promise<void> {
     await this.overlayService.alert({
       message: `Você deseja excluir o paciente "${home.nome}"?`,

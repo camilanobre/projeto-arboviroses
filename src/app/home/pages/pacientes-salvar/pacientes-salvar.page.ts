@@ -54,13 +54,16 @@ export class PacientesSalvarPage implements OnInit {
   async onSubmit(): Promise<void> {
     const loading = await this.overlayService.loading({
       message: 'Salvando...'
-    })
+    });
     try{
-      const paciente = await this.pacientesService.create(this.pacienteForm.value);
-     //  console.log('paciente criado => ', paciente);
+      const paciente = !this.pacienteId
+      ?await this.pacientesService.create(this.pacienteForm.value)
+      :await this.pacientesService.update({
+        id: this.pacienteId,
+        ...this.pacienteForm.value
+      });
       this.navCtrl.navigateBack('/pacientes');
     } catch(error){
-     //  console.log('erro ao salvar => ', error)
       await this.overlayService.toast({
         message: 'Erro ao salvar'
       });

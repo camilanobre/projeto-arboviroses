@@ -37,7 +37,7 @@ export class PacientesSalvarPage implements OnInit {
     }
     this.pacienteId = pacienteId;
     console.log('id => ', pacienteId)
-    this.pageTitle = 'Editar Paciente';
+    this.pageTitle = 'Alterar Paciente';
     this.pacientesService.get(pacienteId)
       .pipe(take(1))
       .subscribe(({ nome })=> {

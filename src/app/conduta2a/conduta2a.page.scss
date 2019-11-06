@@ -3,19 +3,18 @@ ion-item:hover{
   }
 
 p{
-  font-family: 'Nanum Gothic';
+  font-family: 'Barlow', sans-serif;
   text-align: justify;
 }
 h3{
   font-weight: bold;
-  font-family: 'Nanum Gothic';
+  font-family: 'Barlow', sans-serif;
 }
 li{
-font-family: 'Nanum Gothic';  
+font-family: 'Barlow', sans-serif;  
 }
 ion-content{
-
-  --ion-background-color: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  --ion-background-color: linear-gradient(to bottom, #ffffff, #f4f6ff, #e3efff, #cdeaff, #b3e5fc);
 }
 ion-button{
   font-weight: bold

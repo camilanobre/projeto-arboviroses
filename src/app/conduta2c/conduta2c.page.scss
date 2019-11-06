@@ -1,9 +1,8 @@
 ion-item:hover{
     cursor: pointer;
   }
-ion-content{
-
-    --ion-background-color: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  ion-content{
+    --ion-background-color: linear-gradient(to bottom, #ffffff, #f4f6ff, #e3efff, #cdeaff, #b3e5fc);
   }
 p{
   font-family: 'Barlow', sans-serif;

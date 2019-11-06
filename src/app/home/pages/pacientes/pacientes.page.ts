@@ -5,6 +5,7 @@ import { PacientesService } from '../../services/pacientes.service';
 import { NavController } from '@ionic/angular';
 import { OverlayService } from 'src/app/services/overlay.service';
 import { take } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pacientes',
@@ -20,7 +21,8 @@ export class PacientesPage  {
   constructor(
   private pacientesService: PacientesService,
   private navCtrl: NavController,
-  private overlayService: OverlayService
+  private overlayService: OverlayService,
+  private router : Router,
   ) {}
 
   async ionViewDidEnter():Promise<void> {
@@ -44,6 +46,7 @@ export class PacientesPage  {
               await this.pacientesService.delete(home)
               await this.overlayService.toast({
                 message: ` O paciente "${home.nome}" foi deletado!`
+
               })
             }
           },

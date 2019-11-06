@@ -7,6 +7,9 @@ p{
   text-align: center;
   font-weight: bold;
 }
+ion-title{
+  font-family: 'Barlow', sans-serif;
+}
 h3{
   font-weight: bold;
   font-family: 'Barlow', sans-serif;
@@ -15,8 +18,7 @@ li{
   font-family: 'Barlow', sans-serif;
 }
 ion-content{
-
-  --ion-background-color: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  --ion-background-color: linear-gradient(to bottom, #ffffff, #f4f6ff, #e3efff, #cdeaff, #b3e5fc);
 }
 .ion-color-verde {
   --ion-color-base: var(--ion-color-verde)

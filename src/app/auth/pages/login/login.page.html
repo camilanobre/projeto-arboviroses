@@ -6,9 +6,11 @@
           size-md="6" 
           size-lg="4" 
           size-xl="4">
-        <h1 text-center>
-          <ion-icon name="pulse" color="favorite" class="icon-7em"></ion-icon>
-          </h1>
+         <h1 text-center>
+            <img src="https://f-scope.net/images/medical-icon-png.png"/>
+<!--           <ion-icon name="pulse" color="favorite" class="icon-7em"></ion-icon>
+ -->          <br>
+                </h1> 
           
           <form [formGroup]="authForm" 
                 (submit)="onSubmit(authProviders.Email)">
@@ -45,14 +47,25 @@
                 Senha com mínimo de 6 caracteres
             </ion-note>
             </ion-item>
-            <ion-button expand="block" type="submit" [disabled]="authForm.invalid" class="button">{{ configs.action }}</ion-button>
+            <br>
+            <div text-center>
+            <ion-button  type="submit" [disabled]="authForm.invalid" class="button">{{ configs.action }}</ion-button>
+            </div>
           </form>
-          
-          <ion-button expand="block" fill="clear" (click)="changeAuthAction()">
+          <div text-center>
+          <ion-button  fill="clear" (click)="changeAuthAction()">
             {{ configs.actionChange }}
           </ion-button>
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>
-
 </ion-content>
+<ion-footer >
+    <ion-toolbar color="login" >
+      <ion-title>Sistema de Controle de Arboviroses©</ion-title>
+      <ion-avatar slot="end">
+       <!--  <img src="./assets/logo.png"> -->
+        </ion-avatar>
+    </ion-toolbar>
+  </ion-footer>

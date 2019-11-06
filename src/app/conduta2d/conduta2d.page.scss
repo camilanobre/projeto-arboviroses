@@ -11,9 +11,8 @@ h3{
   font-family: 'Barlow', sans-serif;
 }
 ion-content{
-  --ion-background-color: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  --ion-background-color: linear-gradient(to bottom, #ffffff, #f4f6ff, #e3efff, #cdeaff, #b3e5fc);
 }
-
 ion-button {
   font-weight: bold
 }
@@ -21,7 +20,6 @@ ion-avatar {
   width: 30px;
   height: 30px;
   margin-right: 10px
-
 }
 ion-title {
   font-size: 15px;
